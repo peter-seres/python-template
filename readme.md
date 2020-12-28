@@ -30,7 +30,7 @@ Build using Dockerfile:
 
 #### Setting up Pycharm
 
-1) Docker -> Settings -> General -> Enable ""
+1) Docker -> Settings -> General -> Enable "Expose daemon on tcp://localhost:2375 without TLS"
 
 2) Pycharm -> File / Settings / Project Settings / Python Interpreter -> Add a new Docker interpreter.
 
