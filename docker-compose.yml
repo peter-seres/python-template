@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  web_example:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/my_project/src
+    environment:
+      FLASK_ENV: development
