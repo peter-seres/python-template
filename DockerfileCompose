@@ -8,8 +8,5 @@ WORKDIR /my_project
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# Copy the code
-COPY ./src ./src
-
 # Run the server example
 CMD ["python", "./src/server.py"]

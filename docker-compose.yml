@@ -3,7 +3,7 @@ services:
   web_example:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: DockerfileCompose
     ports:
       - "5000:5000"
     volumes:

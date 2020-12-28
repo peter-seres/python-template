@@ -1,10 +1,11 @@
 This is a template repository for containerized python projects.
 Convenient folder structure for custom python packages, for running `pytest` and using Docker.
 
+Includes a Hello World example: `./src/server.py` -> localhost:5000
+
 #### Using local virtual env
 
 `python -m venv venv`
-
 
 `venv/scripts/activate` or `source venv\bin\activate`
 
@@ -15,7 +16,7 @@ Convenient folder structure for custom python packages, for running `pytest` and
 
 Run using docker-compose:
 
-`docker-compose up -d`
+`docker-compose up`
 
 Running the tests:
 
@@ -23,9 +24,9 @@ Running the tests:
 
 Build using Dockerfile:
 
-`docker build -t my_image .` (Make sure the source code is copied over in the Dockerfile)
+`docker build -t my_image .`
 
-`docker run -d -p 5000:5000 my_image`
+`docker run -p 5000:5000 my_image`
 
 #### Setting up Pycharm
 
