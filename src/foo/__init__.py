@@ -1,1 +1,1 @@
-from .bar import hello
+from .bar import hello, factorial

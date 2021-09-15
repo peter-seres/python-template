@@ -1,37 +1,60 @@
-This is a template repository for containerized python projects.
-Convenient folder structure for custom python packages, for running `pytest` and using Docker.
+# Python-template
 
-Includes a Hello World example: `./src/server.py` -> localhost:5000
+This is a template repository for starting a python project.
+Includes the following automated testing:
 
-#### Using local virtual env
+- `pytest`: unit tests
+- `mypy`: type hints
+- `flake8`: linter
+- `tox`: test multiple environments
+
+Include / remove the packages you need for your project.
+
+GitHub Actions are configured to run on a push or PR to the master branch.
+
+Badge from GitHub Actions:
+
+![Tests](https://github.com/Speterius/python-template/actions/workflow/tests.yml/badge.svg)
+
+## Environment:
+ - Project dependencies: `requirements.txt`
+ - Development dependencies: `requirements_dev.txt`
+
+___
+Use a virtual environment:
 
 `python -m venv venv`
 
-`venv/scripts/activate` or `source venv\bin\activate`
+`venv/scripts/activate` (Win) or `source venv\bin\activate` (Linux)
 
-`pip install -r requirements.txt`
+The `test/` folder uses a general import of the packages inside `src/` so that the relative path doesn't matter.
+Install the packages in `src/` using: `pip install -e .` (edit mode install)
+
+The files `setup.cfg` and `setup.py` define how the packages will be installed.
+
+## Pytest
+Run unit tests and generate code coverage report.
+
+Configuration: `pytest.ini`
+
+## Mypy
+Check the python code for correct type hinting.
+
+Configuration file: `mypy.ini`
 
 
-#### Using Docker
+## Flake8
+Python linter. Check the code formatting.
 
-Run using docker-compose:
+Configuration: inside `setup.cfg`
 
-`docker-compose up`
 
-Running the tests:
+## Tox
+Run the tests in multiple python environments
 
-`docker-compose run web_example pytest`
+Configuration: `tox.ini`
 
-Build using Dockerfile:
+## GitHub Actions
+Run the tests on certain events.
 
-`docker build -t my_image .`
-
-`docker run -p 5000:5000 my_image`
-
-#### Setting up Pycharm
-
-1) Docker -> Settings -> General -> Enable "Expose daemon on tcp://localhost:2375 without TLS"
-
-2) Pycharm -> File / Settings / Project Settings / Python Interpreter -> Add a new Docker interpreter.
-
-3) Marks `./src` directory as sources root
+Configuration: `.github/workflows/test.yml` and also `tox.ini`
