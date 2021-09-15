@@ -8,4 +8,4 @@ def test_hello():
 
 def test_factorial():
     x = foo.factorial([1, 2, 3])
-    assert x == [1, 2, 6]
+    assert (x == [1, 2, 6]).all()
