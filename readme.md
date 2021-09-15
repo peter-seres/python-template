@@ -2,6 +2,24 @@
 
 This is a template repository for starting a python project.
 
+
+## Pytest
+Run unit tests and generate code coverage report.
+
+Configuration: `pytest.ini`
+
+## Mypy
+Check the python code for correct type hinting.
+
+Configuration file: `mypy.ini`
+
+
+## Flake8
+Python linter. Check the code formatting.
+
+Configuration: inside `setup.cfg`
+
+
 [comment]: <> (## Set up Environment)
 
 [comment]: <> (```bash)
