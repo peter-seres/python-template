@@ -1,37 +1,39 @@
-This is a template repository for containerized python projects.
-Convenient folder structure for custom python packages, for running `pytest` and using Docker.
+# Python-template
 
-Includes a Hello World example: `./src/server.py` -> localhost:5000
+This is a template repository for starting a python project.
 
-#### Using local virtual env
+[comment]: <> (## Set up Environment)
 
-`python -m venv venv`
+[comment]: <> (```bash)
 
-`venv/scripts/activate` or `source venv\bin\activate`
+[comment]: <> (python -m venv venv)
 
-`pip install -r requirements.txt`
+[comment]: <> (venv/scripts/activate   or   source venv\bin\activate)
 
+[comment]: <> (pip install -r requirements.txt)
 
-#### Using Docker
+[comment]: <> (```)
 
-Run using docker-compose:
+[comment]: <> (## Using Docker)
 
-`docker-compose up`
+[comment]: <> (Run using docker-compose:)
 
-Running the tests:
+[comment]: <> (`docker-compose up`)
 
-`docker-compose run web_example pytest`
+[comment]: <> (Running the tests:)
 
-Build using Dockerfile:
+[comment]: <> (`docker-compose run web_example pytest`)
 
-`docker build -t my_image .`
+[comment]: <> (Build using Dockerfile:)
 
-`docker run -p 5000:5000 my_image`
+[comment]: <> (`docker build -t my_image .`)
 
-#### Setting up Pycharm
+[comment]: <> (`docker run -p 5000:5000 my_image`)
 
-1) Docker -> Settings -> General -> Enable "Expose daemon on tcp://localhost:2375 without TLS"
+[comment]: <> (#### Setting up Pycharm)
 
-2) Pycharm -> File / Settings / Project Settings / Python Interpreter -> Add a new Docker interpreter.
+[comment]: <> (1&#41; Docker -> Settings -> General -> Enable "Expose daemon on tcp://localhost:2375 without TLS")
 
-3) Marks `./src` directory as sources root
+[comment]: <> (2&#41; Pycharm -> File / Settings / Project Settings / Python Interpreter -> Add a new Docker interpreter.)
+
+[comment]: <> (3&#41; Marks `./src` directory as sources root)
