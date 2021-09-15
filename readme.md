@@ -10,6 +10,12 @@ Includes the following automated testing:
 
 Include / remove the packages you need for your project.
 
+GitHub Actions are configured to run on a push or PR to the master branch.
+
+Badge from GitHub Actions:
+
+![Tests](https://github.com/Speterius/python-template/actions/workflow/tests.yml/badge.svg)
+
 ## Environment:
  - Project dependencies: `requirements.txt`
  - Development dependencies: `requirements_dev.txt`
@@ -43,26 +49,12 @@ Python linter. Check the code formatting.
 Configuration: inside `setup.cfg`
 
 
-[comment]: <> (## Using Docker)
+## Tox
+Run the tests in multiple python environments
 
-[comment]: <> (Run using docker-compose:)
+Configuration: `tox.ini`
 
-[comment]: <> (`docker-compose up`)
+## GitHub Actions
+Run the tests on certain events.
 
-[comment]: <> (Running the tests:)
-
-[comment]: <> (`docker-compose run web_example pytest`)
-
-[comment]: <> (Build using Dockerfile:)
-
-[comment]: <> (`docker build -t my_image .`)
-
-[comment]: <> (`docker run -p 5000:5000 my_image`)
-
-[comment]: <> (#### Setting up Pycharm)
-
-[comment]: <> (1&#41; Docker -> Settings -> General -> Enable "Expose daemon on tcp://localhost:2375 without TLS")
-
-[comment]: <> (2&#41; Pycharm -> File / Settings / Project Settings / Python Interpreter -> Add a new Docker interpreter.)
-
-[comment]: <> (3&#41; Marks `./src` directory as sources root)
+Configuration: `.github/workflows/test.yml` and also `tox.ini`
