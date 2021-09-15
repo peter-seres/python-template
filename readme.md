@@ -1,7 +1,30 @@
 # Python-template
 
 This is a template repository for starting a python project.
+Includes the following automated testing:
 
+- `pytest`: unit tests
+- `mypy`: type hints
+- `flake8`: linter
+- `tox`: test multiple environments
+
+Include / remove the packages you need for your project.
+
+## Environment:
+ - Project dependencies: `requirements.txt`
+ - Development dependencies: `requirements_dev.txt`
+
+___
+Use a virtual environment:
+
+`python -m venv venv`
+
+`venv/scripts/activate` (Win) or `source venv\bin\activate` (Linux)
+
+The `test/` folder uses a general import of the packages inside `src/` so that the relative path doesn't matter.
+Install the packages in `src/` using: `pip install -e .` (edit mode install)
+
+The files `setup.cfg` and `setup.py` define how the packages will be installed.
 
 ## Pytest
 Run unit tests and generate code coverage report.
@@ -19,18 +42,6 @@ Python linter. Check the code formatting.
 
 Configuration: inside `setup.cfg`
 
-
-[comment]: <> (## Set up Environment)
-
-[comment]: <> (```bash)
-
-[comment]: <> (python -m venv venv)
-
-[comment]: <> (venv/scripts/activate   or   source venv\bin\activate)
-
-[comment]: <> (pip install -r requirements.txt)
-
-[comment]: <> (```)
 
 [comment]: <> (## Using Docker)
 
