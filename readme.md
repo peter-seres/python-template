@@ -14,7 +14,7 @@ GitHub Actions are configured to run on a push or PR to the master branch.
 
 Badge from GitHub Actions:
 
-![Tests](https://github.com/Speterius/python-template/actions/workflow/tests.yml/badge.svg)
+![Tests](https://github.com/Speterius/python-template/actions/workflows/test.yml/badge.svg)
 
 ## Environment:
  - Project dependencies: `requirements.txt`
